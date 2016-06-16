@@ -9,7 +9,7 @@ No worries, **YoutubePlaylistSnapshot.py** will save all of your playlist videos
 
 You can follow [the steps here to get your own key.](https://developers.google.com/youtube/v3/getting-started#before-you-start)
 
-Do "*YoutubePlaylistSnapshot.py -h*" for help.
+Do "*YoutubePlaylistSnapshot.py -h*" for usage help.
   
 ### Example Usage
 Say you want to take a snapshot of this playlist: https://www.youtube.com/watch?v=fRh_vgS2dFE&list=PLDcnymzs18LVXfO_x0Ei0R24qDbVtyy66
