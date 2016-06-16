@@ -5,6 +5,7 @@ import zipfile
 import argparse
 import codecs
 import datetime
+import sys
 from apiclient.discovery import build
 
 DEVELOPER_KEY = "REPLACE_THIS_WITH_YOUR_OWN_API_KEY"
@@ -111,6 +112,10 @@ def setChannelNames(pages):
                 j+=1
                                 
 if __name__ == "__main__":
+    if DEVELOPER_KEY == "REPLACE_THIS_WITH_YOUR_OWN_API_KEY":
+        print("You must first enter your own Youtube Data API developer key. Check for more info: https://github.com/Majiick/YoutubePlaylistSnapshot/blob/master/README.md#usage")
+        sys.exit()
+
     youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
     args = getArgs()
     extraFields = getExtraFields(args)
@@ -128,8 +133,8 @@ if __name__ == "__main__":
         ).execute()
 
         if playlistItems["pageInfo"]["totalResults"] > MAX_PLAYLIST_SIZE:
-            print("Playlist is too large.")
-            break
+            print("Playlist is too large. Edit MAX_PLAYLIST_SIZE to a higher value.")
+            sys.exit()
 
         pages.append(playlistItems)
 
