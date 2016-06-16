@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import os
-import zipfile
 import argparse
 import codecs
 import datetime
@@ -15,6 +14,9 @@ RESULTS_PER_PAGE = 50 #1-50 as per Google's rules.
 MAX_PLAYLIST_SIZE = 5000
 
 def getArgs():
+    """
+    Process command-line arguments.
+    """
     parser = argparse.ArgumentParser(description='Retrieve a list of youtube videos in a playlist.')
     parser.add_argument("id", type=str, metavar="id", help="Youtube ID of the playlist to scrap.")
     parser.add_argument('-dt', '--date', action='store_true', help="Include the date when the video was added to the playlist?")
@@ -44,7 +46,7 @@ def getExtraFields(args):
 
 def getExtraInfo(args, item):
     """
-    Returns a string of what information to save with the video name based on args optional parameters.
+    Returns a string of information to save with the video name based on args optional parameters.
     """
     extraInfo = ""
     
