@@ -18,7 +18,7 @@ def getArgs():
     parser.add_argument("id", type=str, metavar="id", help="Youtube ID of the playlist to scrap.")
     parser.add_argument('-dt', '--date', action='store_true', help="Include the date when the video was added to the playlist?")
     parser.add_argument('-ds', '--description', action='store_true', help="Include the description of videos?")
-    parser.add_argument('-un', '--uploadername', action='store_true', help="**NOT IMPLEMENTED** Include the channel name of the uploader of video?")
+    parser.add_argument('-un', '--uploadername', action='store_true', help="Include the channel name of the uploader of video?")
 
     args = parser.parse_args()
     args = vars(args) #Turn into dict-like view.
