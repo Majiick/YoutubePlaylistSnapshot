@@ -5,7 +5,8 @@ Tired of seeing and not knowing which video got removed?
 No worries, **YoutubePlaylistSnapshot.py** will save all of your playlist videos in a text file so you will know which one(s) was removed from YouTube.
 
 ### Usage
-Before using, you have to open up the script and enter your own Google API key in place of DEVELOPER_KEY = "REPLACE_THIS_WITH_YOUR_OWN_API_KEY"
+**Before using**, you have to open up the script and enter your own Google API key in place of DEVELOPER_KEY = "REPLACE_THIS_WITH_YOUR_OWN_API_KEY"
+
 You can follow [the steps here to get your own key.](https://developers.google.com/youtube/v3/getting-started#before-you-start)
 
 Do "*YoutubePlaylistSnapshot.py -h*" for help.
