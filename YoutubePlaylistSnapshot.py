@@ -51,7 +51,10 @@ def getExtraInfo(args, item):
     extraInfo = ""
     
     if args["uploadername"]:
-        extraInfo += " |Uploader: {}|".format(item["snippet"]["resourceId"]["uploader"])
+        try:
+            extraInfo += " |Uploader: {}|".format(item["snippet"]["resourceId"]["uploader"])
+        except:
+            print("couldn't get uploader of:" + str(item["snippet"]["title"].encode("utf8")))
     
     if args["date"]:
         extraInfo += " |Date Added: {}|".format(item["snippet"]["publishedAt"][:-5]) #-5 to remove 000Z
@@ -107,7 +110,7 @@ def setChannelNames(pages):
             j = 0
             for items in pages[int((i - 1) / 50)]["items"]:
                 if j > len(videos["items"]) - 1:
-                    print(j)
+                    #print(j)
                     break
                 
                 items["snippet"]["resourceId"]["uploader"] = videos["items"][j]["snippet"]["channelTitle"]
