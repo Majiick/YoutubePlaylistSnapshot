@@ -1,3 +1,6 @@
+"""Saves a given Youtube playlist's videos in a text format.
+"""
+
 #!/usr/bin/python
 
 import os
